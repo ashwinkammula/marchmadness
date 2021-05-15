@@ -14277,8 +14277,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>NCAA Men's March Madness is the United States largest collegiate basketball tournament. Every year, hundreds of millions of people around the world make March Madness brackets, trying to correctly predict the outcomes of the 63 games in the tournament. The March Madness tournament is famed for its unpredictability and improbable outcomes.</p>
 <p>Bracket making has become a cultural phenomenon reaching experts, casual fans, and college basketball novices. Despite the massive number of brackets made each year, no person has ever devised the perfect bracket. The odds of forming a perfect bracket are so slim that Warren Buffet has made an annual contest offering $1 Billion dollars to anyone who correctly picks the winners of each game.</p>
-<p>In this analysis, I will try to identify the leading statistical indicators of success in the NCAA Mens March Madness Tournament. I will try to develop a model which predicts the expected tournament round reached by a team given their regular season statistics. This model will focus exclusively on the statistics of a team itself, not the teams which they are facing. I would like to determine if my predictive model has better accuracy compared to selecting winners based on bracket seeding.</p>
-<p>As an avid Maryland Basketball fan, it was disappointing to see the 2020 NCAA Mens Basketball Tournament canceled due to the COVID-19 Pandemic. This was a season in which Maryland Basketball was consistently ranked within the AP Top 25 and won a share of the Big 10 Regular Season Championship. Using my model, I will try to predict the outcome of the 2020 Tournament and Maryland Basketball's performance in the tournament.</p>
+<p>In this analysis, I will try to identify the leading statistical indicators of success in the NCAA Men's March Madness Tournament. I will try to develop a model which predicts the expected tournament round reached by a team given their regular season statistics. This model will focus exclusively on the statistics of a team itself, not the teams which they are facing. I would like to determine if my predictive model has better accuracy compared to selecting winners based on bracket seeding.</p>
+<p>As an avid Maryland Basketball fan, it was disappointing to see the 2020 NCAA Men's Basketball Tournament canceled due to the COVID-19 Pandemic. This was a season in which Maryland Basketball was consistently ranked within the AP Top 25 and won a share of the Big 10 Regular Season Championship. Using my model, I will try to predict the outcome of the 2020 Tournament and Maryland Basketball's performance in the tournament.</p>
 
 </div>
 </div>
@@ -14289,7 +14289,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this analysis, I will take advantage of several highly popular data science packages for python. To learn more about these packages, thorough documentation is available online.</p>
+<p>In this analysis, I will take advantage of several highly popular data science packages for Python. To learn more about these packages, thorough documentation is available online.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14330,7 +14330,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>From this dataset, I am using the cbb.csv file and the cbb20.csv file. I downloaded these comma-separated value files from the Kaggle website, and then loaded them into this Jupyter Notebook.</p>
-<p>The cbb.csv file contains data for teams who competed in the NCAA Mens March Madness tournament in the years from 2013-2019. The cbb20.csv file contains data for all NCAA Division I Mens Basketball Teams from 2020, however, it does not contain data pertaining to the March Madness Tournament, because in 2020, the tournament did not occur.</p>
+<p>The cbb.csv file contains data for teams who competed in the NCAA Men's March Madness tournament in the years from 2013-2019. The cbb20.csv file contains data for all NCAA Division I Men's Basketball Teams from 2020, however, it does not contain data pertaining to the March Madness Tournament, because in 2020, the tournament did not occur.</p>
 
 </div>
 </div>
@@ -14594,9 +14594,9 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the cleaning phase of this project, I first remove all rows of data which contain missing data (represented by NaN). It was observed that the only teams for which data is missing are the teams which did not compete in the NCAA tournament. Because they did not compete in the tournament, they will not be needed in this analysis.</p>
-<p>Additionally, in the NCAA tournament there is a prelimanry round of 68 which consists of 4 games. I am not going to consider this round in my analysis because it does not follow the typical rules of the bracket in which the number of teams is halved after the round.</p>
-<p>Finally, I am going to remove several columns of data. First, I am going to remove the categorical data of TEAM and CONF from the dataset. I don't think that these columns hold valuable insight because every year different schools and conferences perform better. Including these columns would complicate my analysis. I am also going to remove the G and W columns of data. In this dataset, the G and W columns consider the games played in the tournaments, so the teams which perform better in the tournament resultingly have more games and wins than other teams. Therefore, these statistics are not indicative of tournament performance.</p>
+<p>In the cleaning phase of this project, I first remove all rows of data which contain missing data (represented by NaN). It was observed that the only teams for which data is missing are the teams which did not compete in the NCAA tournament. These teams will not be needed in this analysis because they did not compete in the tournament.</p>
+<p>Additionally, in the NCAA tournament there is a preliminary round of 68 which consists of 4 games. I am not going to consider this round in my analysis because it does not follow the typical rules of the bracket in which the number of teams is halved after the round.</p>
+<p>Finally, I am going to remove several columns of data. First, I am going to remove the categorical data of <code>TEAM</code> and <code>CONF</code> from the dataset. I don't think that these columns hold valuable insight because every year different schools and conferences perform better. Including these columns would complicate my analysis. I am also going to remove the <code>G</code> and <code>W</code> columns of data. In this dataset, the <code>G</code> and <code>W</code> columns consider the games played in the tournament, so the teams which perform better in the tournament resultingly have more games and wins than other teams. Therefore, these statistics are not indicative of tournament performance.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14672,9 +14672,9 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>I am going to transform this dataset into four different dataframes which will be used at different stages of my analysis.</p>
 <p>The first dataframe is going to be the data as it already is. I will call this orig.</p>
-<p>The next dataframe, will be the same as the original, however, I will transform the <code>POSTSEASON</code> column into a numerical measure. As is, the <code>POSTSEASON</code> column consists of categorical values such as <code>R64</code>, <code>R32</code>, etc. which represents the latest round which a team reached. I am going to convert this into floats where 1.0 represents making it to the Round of 64, 2.0 represents making it to the Round of 32, ... 6.0 represents making it to the Championship, and 7.0 represents winning the Championship Game. I will call this dataframe, orig_num.</p>
-<p>The third dataframe will be the same as the original, except all numerical values will be standardized based on the year. This is important so that I can see how each value fares compared to other teams of the same year. This might be insightful because it describes how a team compares to other teams in the tournament in the same year. I will standardize each value using the equation:  $(unstandardized - \bar{x}_{year})/\sigma_{year}$ This dataframe will be called stnd.</p>
-<p>The final dataframe will be the same as the standardized, except the <code>POSTSEASON</code> column will be converted into numerical data as with the orig_num dataframe. This will be called stnd_num</p>
+<p>The next dataframe, will be the same as the original, however, I will transform the <code>POSTSEASON</code> column into a numerical measure. As is, the <code>POSTSEASON</code> column consists of categorical values such as <code>R64</code>, <code>R32</code>, etc. which represents the latest round which a team reached. I am going to convert this into float values where 1.0 represents making it to the Round of 64, 2.0 represents making it to the Round of 32, ... 6.0 represents making it to the Championship, and 7.0 represents winning the Championship Game. I will call this dataframe, orig_num.</p>
+<p>The third dataframe will be the same as the original, except all numerical values will be standardized based on the year. This shows how each value compares to other team's of the same year. This might be insightful because it describes how a team ranks in terms of that year's tournament participants. I will standardize each value using the equation:  $(unstandardized - \bar{x}_{year})/\sigma_{year}$ This dataframe will be called stnd.</p>
+<p>The final dataframe will be the same as the standardized, except the <code>POSTSEASON</code> column will be converted into numerical data as with the orig_num dataframe. This will be called stnd_num.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14776,8 +14776,8 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In the first part of my data exploration, I want to get a grasp for the different columns of data and how they correlate with the tournament round reached. For each data column, I am going to calculate the Pearson Correlation Coefficient and the Spearman Rank Correlation Coefficient with the <code>POSTSEASON</code> Column.</p>
-<p>The Pearson Correlation Coefficient is a measure of the linear correlation between two sets of data. The Spearman Rank Correlation Coefficicent is a statistical method of determining the "statistical dependence between the ranks of two variables". This means that the given data is ranked in order of value and then the correlation between the ranks is then measured. Both coefficients take on values from $-1$ to $1$ with a positive value representating a positive correlation.</p>
-<p>I am expecting both correlation values to show similar results. I am going to run each calculation on the <code>orig_num</code> and <code>stnd_num</code> dataframes. I am also hoping that from this analysis I will be able to determine which dataset I should do further work on.</p>
+<p>The Pearson Correlation Coefficient is a measure of the linear correlation between two sets of data. The Spearman Rank Correlation Coefficient is a statistical method of determining the "statistical dependence between the ranks of two variables". This means that the given data is ranked in order of value and then the correlation between the ranks is then measured. Both coefficients take on values from $-1$ to $1$ with a positive value representing a positive correlation.</p>
+<p>I am expecting both correlation values to show similar results. I am going to run each calculation on the <code>orig_num</code> and <code>stnd_num</code> dataframes. I am hoping that from this analysis I will be able to determine whether I should do the remaining analysis on the original or standardized data.</p>
 <p>Both the Pearson and Spearman analysis will be performed using SciPy's stats package. Here are links to the documentation:
 <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html</a>
 <br><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html</a></p>
@@ -14961,8 +14961,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In judging the strength of the relationships, I primarily looked at the p-value. The p-value is a statistical measure of the likelihood that the relationship observed is just due to change. The table above is sorted in terms of ascending p-values for the Spearman correlations using the standardized dataset.</p>
-<p>One noteable observation is that like expected, the p-values for the Pearson and Spearman seem to be in support of each other. The columns with lower p-values in the Pearson analysis also have lower values in the Spearman analysis.</p>
+<p>In judging the strength of the relationships, I primarily looked at the p-value. The p-value is a statistical measure of the likelihood that the relationship observed is just due to chance. The table above is sorted in terms of ascending p-values for the Spearman correlations using the standardized dataset.</p>
+<p>One notable observation is that, like expected, the p-values for the Pearson and Spearman seem to be in support of each other. The columns with lower p-values in the Pearson analysis also have lower p-values in the Spearman analysis.</p>
 <p>Another more significant observation is that the original data set and the standardized datasets had almost identical p-values for the same correlation test. This suggested to me that standardizing the data did not make a significant difference.</p>
 <p>Finally, after the top five columns in the table above (excluding <code>POSTSEASON</code>), there is a significant increase in p-value. For the Spearman analysis with the standardized data, the p-value for <code>ADJDE</code> is $8.09e-30$ and the p-value for <code>EFG_D</code> is $2.17e-08$. This indicated to me that the five columns, <code>BARTHAG</code>, <code>WAB</code>, <code>SEED</code>, <code>ADJOE</code>, and <code>ADJDE</code> might be the most valuable indicators for tournament performance.</p>
 
@@ -14977,17 +14977,17 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Before we go further, lets go further in depth into what these top six columns mean from a basketball standpoint.</p>
 <p><code>BARTHAG</code> - This is a value from 0 to 1 which represents the probability that a team will win when they face a Division I Opponent. Division I is the highest division in College Basketball and typically consists of the strongest competition.</p>
-<p><code>WAB</code> - This is positive float. WAB stands for wins above bubble. This is a very interesting statistic which is the cumulative value from every game a team plays in a season. For each opponent a team faces, a percentage is determined of the chance that an average bubble team (a team which barely makes the NCAA tournament) would beat that team. Now if the team loses, then the their WAB value decreases by the percent chance. If they win, then their WAB value increases by the percent change. WAB values increase more when a team beats good teams, and they decrease when a team loses to a bad team</p>
-<p><code>SEED</code> - This is the teams seed in the March Madness Tournament. Seeds range from 1 to 16 where 1 is the best and 16 is the worst. In the tournament, there are four quadrants, each with a single 1 through 16 seed. The seeds are assigned by a selection committee and are decided based on a teams performance in the regular season</p>
-<p><code>ADJOE</code> - This is a positive float. ADJOE stands for Adjusted Offensive Efficiency. It is a measure of how many points a team would score if they had 100 offensive posessions. A higher ADJOE value means a more efficient offense.</p>
-<p><code>ADJDE</code> - This is a positive float. ADJDE stands for Adjusted Defensive Efficiency. It is a measure of how many points a team allows on defense if an arbitrary opponent had 100 posessions. A lower ADJDE value means a more stringent defense</p>
+<p><code>WAB</code> - This is positive float. WAB stands for wins above bubble. This is a very interesting statistic which is the cumulative value from every game a team plays in a season. For each opponent, a team faces, a percentage is calculated of the chance that an average bubble team (a team which barely makes the NCAA tournament) would beat that team. Now if the team loses, then their WAB value decreases by the percent chance. If they win, then their WAB value increases by the percent change. WAB values increase more when a team beats good teams, and they decrease when a team loses to a bad team.</p>
+<p><code>SEED</code> - This is the team's seed in the March Madness Tournament. Seeds range from 1 to 16 where 1 is the best and 16 is the worst. In the tournament, there are four quadrants, each with a single 1 through 16 seed. The seeds are assigned by a selection committee and are decided based on a team's performance in the regular season.</p>
+<p><code>ADJOE</code> - This is a positive float. ADJOE stands for Adjusted Offensive Efficiency. It is a measure of how many points a team would score if they had 100 offensive possessions. A higher ADJOE value means a more efficient offense.</p>
+<p><code>ADJDE</code> - This is a positive float. ADJDE stands for Adjusted Defensive Efficiency. It is a measure of how many points a team allows on defense if an arbitrary opponent had 100 possessions. A lower ADJDE value means a more stringent defense.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to obtain a better understanding of the data for these columns, I am going to graph a violinplot for each of these variables with the Tournament Round reached on the y-axis. These figures will give me a better visual understanding of the spread of the data within each tournament round classification.</p>
-<p>The violinplots were made using the Matplotlib Library. For more information on plotting violin plots, here is the documentation: <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.violinplot.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.violinplot.html</a></p>
+<p>In order to obtain a better understanding of the data for these columns, I am going to graph a violin plot for each of these variables with the Tournament Round reached on the y-axis. These figures will give me a better visual understanding of the spread of the data within each tournament round classification.</p>
+<p>The violin plots were made using the Matplotlib Library. For more information on plotting violin plots, here is the documentation: <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.violinplot.html">https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.violinplot.html</a></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15105,8 +15105,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Each of the plots above shows the distribution of a certain column of data for teams which finished the tournament in each round. The six columns I plotted are the five columns with the lowest p-values in the correlation analysis plus the sixth column which had a significantly lower p-value.</p>
-<p>One of the primary reasons for looking at these plots is to assess whether a linear regression model might be a good fit. From looking at each of these variables, there is not a clear linear relationship between the data and tournament performance, however, the correlation is clear. Teams which reach further in the tournament typically have higher BARTHAG values, higher WAB, lower SEED, higher ADJOE, and lower ADJDE. Due to the lack of a linear relationship, a linear regression model is likely not a good fit for this analysis.</p>
+<p>Each of the plots above shows the distribution of a certain column of data for teams which finished the tournament in each round. The six data columns I plotted are the five columns with the lowest p-values in the correlation analysis plus the sixth column which had a significantly lower p-value.</p>
+<p>One of the primary reasons for looking at these plots is to assess whether a linear regression model might be a good fit. From looking at each of these variables, there is not a clear linear relationship between the data and tournament performance, however, the correlation is clear. Teams which reach further in the tournament typically have higher BARTHAG values, higher WAB, lower SEED, higher ADJOE, and lower ADJDE. Due to the lack of a clear linear relationship, a linear regression model is likely not a good fit for this analysis.</p>
 
 </div>
 </div>
@@ -15128,10 +15128,10 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In my first attempt at developing an ML model, I will create a Random Forest Classifier. A Random Forest is a supervised machine learning model which creates a series of decision trees and then combines them together to produce a more accurate classifying model. A decision tree is an ML method which acts similarly to common road trip game, twenty questions. At each node in the tree, a feature of the data is analyzed, and then depending on the outcome, the data moves onto to a different node. A random forest takes the classification from each of the decision trees and then returns the most common classification. Each of the decision trees in a random forest is built on a subset of the data. This is helpful in preventing data overfitting. Overfitting is when the ML model is overly sensitive to the training data and does not extend well to testing data.</p>
+<p>In my first attempt at developing an ML model, I will create a Random Forest Classifier. A Random Forest is a supervised machine learning model which creates a series of decision trees and then combines them together to produce a more accurate classifying model. A decision tree is an ML method which acts similarly to the common road trip game, Twenty Questions. At each node in the tree, a feature of the data is analyzed, and then depending on the outcome, the data moves onto to a different node. A random forest takes the classification from each of the decision trees and then returns the most common classification. Each of the decision trees in a random forest is built on a subset of the data. This is helpful in preventing data overfitting. Overfitting is when the ML model is overly sensitive to the training data and does not extend well to testing data.</p>
 <p>Here is a great resource to learn more about Random Forests: <a href="https://builtin.com/data-science/random-forest-algorithm">https://builtin.com/data-science/random-forest-algorithm</a></p>
 <p>There are several parameters which need adjustment in creating the Random Forest Classifier. I want to find the parameter values which result in the most accurate classifier. The parameters I am testing are the dataframe (either original or standardized), the columns (which independent variables should the classifier be built on), and the depth of the tree. If the depth is too large, you are prone to data overfitting, if it is too short, you lose accuracy.</p>
-<p>In testing the parameters, I used a K-Fold Cross Validation approach. I used data from 2013-2018. I made 6 folds. In each fold, data from one year is excluded and is used as a test set. I take the average scores from the 6 folds. Often times, folds of data are randomly determined, however, I decided to split the data by year so that there is an equal number of R64, R32,... teams in each fold.</p>
+<p>In testing the parameters, I used a K-Fold Cross Validation approach. I used data from 2013-2018. I made 6 folds. In each fold, data from one year is excluded and is used as a test set. I take the average scores from the 6 folds. Often times, folds of data are randomly determined, however, I decided to split the data by year so that there is a proportionate number of R64, R32,... teams in each fold.</p>
 <p>You can read more about K-Fold Cross Validation, here: <a href="https://machinelearningmastery.com/k-fold-cross-validation/">https://machinelearningmastery.com/k-fold-cross-validation/</a></p>
 <p>I run this 6-Fold analysis, five times and take the average. Because Random Forests are built on random sampling, averaging the results of five trials gave me a more robust indicator of the strength of the model.</p>
 
@@ -15217,7 +15217,7 @@ Average Score for Classifier with Standardized Data: 0.5171875000000001
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The average scores for the classifier using the original data and standardized data are very similar. Like I saw with the Pearson and Spearman correlation analysis, the standardized data produced slightly better results. I will proceed with this.</p>
-<p>Next, I want to narrow down the data columns in which the model is built on. Random Forests have the ability to measure the importance of each feature in the analysis. This allows the user to remove the features with lower contribution to the model. The figure below displays the feature importance for each independent variable in the classifier</p>
+<p>Next, I want to narrow down the data columns in which the model is built on. Random Forests have the ability to measure the importance of each feature in the model. This allows the user to remove the features with lower contribution to the model. The figure below displays the feature importance for each independent variable in the classifier.</p>
 
 </div>
 </div>
@@ -15286,7 +15286,7 @@ Average Score for Classifier with Standardized Data: 0.5171875000000001
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I will create a Random Forest Classifier with 8 different subsets of the top 8 independ variables according to feature importance. The average score of these models will be printed and compared.</p>
+<p>I will create a Random Forest Classifier with 8 different subsets of the top 10 independent variables according to feature importance. The average score of these models will be printed and compared.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15350,7 +15350,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;WAB&#39;, &#39;ADJOE&#39;] : 0.5432
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>None of these models seems to be significantly worse than the others. I will continue to work with all of these as I try to fit the next parameters. The next parameter I am going to determine is the max depth of the tree. Setting just the right depth prevents the model from overfitting and underfitting</p>
+<p>None of these models seems to be significantly worse than the others. I will continue to work with all of these as I try to fit the next parameters. The next parameter I am going to determine is the max depth of the tree. Setting just the right depth prevents the model from overfitting and underfitting.</p>
 
 </div>
 </div>
@@ -15474,7 +15474,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;WAB&#39;, &#39;ADJOE&#39;] : 0.5583
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Of all the trials ran, the one with the best score was using the columns, <code>BARTHAG</code>, <code>WAB</code>, and <code>ADJOE</code> with a max depth of 6. This is going to be the model which I move forward with in my prediction of 2020 results. I will now train a Random Forest classifier with these parameters on all the data from 2013-2018.</p>
+<p>Of all the trials ran, the one with the best score was using the columns, <code>BARTHAG</code>, <code>WAB</code>, and <code>ADJOE</code> with a max depth of 6. This is going to be the model which I move forward with in my prediction of 2020 results. I will now train a Random Forest Classifier with these parameters on all the data from 2013-2018.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15521,7 +15521,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;WAB&#39;, &#39;ADJOE&#39;] : 0.5583
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Next I am going to display an example regressor tree. The color represents the most likely classification for when a sample reaches that node. Only the first 2 levels of the tree are displayed.</p>
+<p>Next, I am going to display an example regressor tree. The color represents the most likely classification for when a sample reaches that node. Only the first 2 levels of the tree are displayed. Note that the first line at each node tells the user what the model is splitting values based off of. At each node, some samples go to the left child and some go to the right child.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15574,7 +15574,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;WAB&#39;, &#39;ADJOE&#39;] : 0.5583
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The next machine learning model I developed is a Random Forest Regressor. A Random Forest Regressor is very similar to a Random Forest Classifier, however, instead of classifying a data point into a category, it outputs a numerical value. This is useful if I treat the <code>POSTSEASON</code> column as a numerical value rather than a categorical value. As I mentioned earlier, I was unsure of whether or not this column should be treated as numerical or categorical. I am trying both approaches to see which model is better.</p>
-<p>The methodology in this section is very similar to that of the Random Forest Classifier. I take a similar K-Fold Cross Validation approach in determing the parameters of the model. The parameters which I am trying to set are: the numerical conversion, the dataset used, the columns, and the max tree depth.</p>
+<p>The methodology in this section is very similar to that of the Random Forest Classifier. I take a similar K-Fold Cross Validation approach in determining the parameters of the model. The parameters which I am trying to set are: the numerical conversion, the dataset used, the columns, and the max tree depth.</p>
 <p>The numerical conversion parameter is unique to the regressor. I created two options in converting the categorical tournament round data into a number. My first option is to just set the value according to the round number. The Round of 64 will be 1.0, the Round of 32 will be 2.0... the 2nd place team will be 6.0 and the championship will be 7.0. The second option is to change the number into a decimal representative of their ranking in the tournament. Teams in the Round of 64 will have a value of 32/64 because they are in the bottom 0.5. The teams in the Round of 32 will have a value of (32+16)/64 because they are in the bottom 0.75. The team which loses in the final will have a value of 63/64 = 0.98 and the tournament champion will be 1.0 because no team is better than them.</p>
 
 </div>
@@ -15624,10 +15624,10 @@ Average Score using [&#39;BARTHAG&#39;, &#39;WAB&#39;, &#39;ADJOE&#39;] : 0.5583
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The options are:</p>
 <ol>
-<li>Use the original data with the rounds specified as numbers 1.0 to 7.0</li>
-<li>Use the standardized data with the rounds specified as numbers 1.0 to 7.0</li>
-<li>Use the original data with rounds specified as fraction of teams finishing in a worse or equal round</li>
-<li>Use the standardized data with rounds specified as fraction of teams finishing in a worse or equal round</li>
+<li>Use the original data with the rounds specified as numbers 1.0 to 7.0.</li>
+<li>Use the standardized data with the rounds specified as numbers 1.0 to 7.0.</li>
+<li>Use the original data with rounds specified as fraction of teams finishing in a worse or equal round.</li>
+<li>Use the standardized data with rounds specified as fraction of teams finishing in a worse or equal round.</li>
 </ol>
 
 </div>
@@ -15735,7 +15735,7 @@ Average Score for Regressor with Standardized Data and Percentages: 0.3683913554
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Now for a max depth of 4, 6, and 8 I will create a model using different sets of the most important features</p>
+<p>Now, for a max depth of 4, 6, and 8 I will create a model using different sets of the most important features.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15901,7 +15901,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Next I am going to display an example regressor tree. The color represents the most likely postseason value when a sample reaches that node. The darker the color, the higher the postseason value.</p>
+<p>Next, I am going to display an example regressor tree. The color represents the most likely postseason value when a sample reaches that node. The darker the color, the higher the postseason value.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15955,8 +15955,8 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In 2020, the Men's basketball regular season was completed, however, due to the coronavirus, the March Madness Tournament was canceled. Because of this, the NCAA March Madness bracket was not released.</p>
-<p>fivethirtyeight.com created a projected bracket based on teams performance during the regular season. For the teams which fivethirtyeight.com projected to compete in the bracket, I will apply my models to determine how far in the tournament they might have made it.</p>
-<p>Here is the link to the fivethirtyeight article with the projected bracket: <a href="https://projects.fivethirtyeight.com/2020-march-madness-predictions/">https://projects.fivethirtyeight.com/2020-march-madness-predictions/</a></p>
+<p>fivethirtyeight.com created a projected bracket based on team's performance during the regular season. For the teams which fivethirtyeight.com projected to compete in the bracket, I will apply my models to determine how far in the tournament they might have made it.</p>
+<p>Here is the link to the FiveThirtyEight article with the projected bracket: <a href="https://projects.fivethirtyeight.com/2020-march-madness-predictions/">https://projects.fivethirtyeight.com/2020-march-madness-predictions/</a></p>
 
 </div>
 </div>
@@ -15967,7 +15967,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>From the Kaggle page I described earlier, I obtained data for all NCAA Men's Division I teams during the 2020 regular season. Now I have to remove the teams which were not projected to make the tournament. Additionally, I have to standardize the data by year like I did with the earlier dataset. The standardization is necessary because the classifier and regressor models which I determined were the best were both built based on standardized data</p>
+<p>From the Kaggle page I described earlier, I obtained data for all NCAA Men's Division I teams during the 2020 regular season. Now I have to remove the teams which were not projected to make the tournament. Additionally, I have to standardize the data by year like I did with the earlier dataset. The standardization is necessary because the classifier and regressor models which I determined were the best were both built based on standardized data.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -16260,7 +16260,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The above table shows the results predicted by both the classifier model and the regressor model. As you can see, there are some significant issues with the classifier model. Ideally, it would have predicted 32 teams for R64, 16 for R32,..., 1 for 2ND, and 1 for Championship. There was no way I was able to encode this into the model. This classifier model will need significant improvements for future use. However, for the duration of this analysis, I will not use the classifier.</p>
+<p>The above table shows the results predicted by both the classifier model and the regressor model. As you can see, there are some significant issues with the classifier model. Ideally, it would have predicted 32 teams for R64, 16 for R32,..., 1 for 2ND, and 1 for Championship. There was no way I was able to encode this into the model. This classifier model will need significant improvements for future use. For the duration of this analysis, I will not use the classifier.</p>
 <p>As for the regressor model, the values predicted span from 1 to 4. This only covers the following rounds: <code>R64</code>, <code>R32</code>, <code>S16</code>, and <code>E8</code>. No teams were predicted to reach past the Elite Eight according to this model. This being said, perhaps the sorted order of the regressor values gives some insight. We could try to treat the actual value outputted from the model as arbitrary. We could rank the teams according to the outputted value from the regressor. These rankings can be correlated with tournament rounds (the first 32 teams pair up with R64, the next 16 teams pair up with R32...) I do this pairing below.</p>
 
 </div>
@@ -16400,7 +16400,7 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Based on the ranking of the values outputted by the regressor model, it is predicted that Kansas would win the tournament. Maryland is expected to be eliminated in the Round of 32.</p>
+<p>Based on the ranking of the values outputted by the regressor model, it is predicted that Kansas would win the tournament. Maryland is expected to be eliminated in the Round of 32. It is unknown how accurate these predictions are. It is interesting that the teams which were typically at the top of the AP Top 25 seem to be predicted to have gone further in the tournament.</p>
 
 </div>
 </div>
@@ -16411,19 +16411,19 @@ Average Score using [&#39;BARTHAG&#39;, &#39;ADJOE&#39;, &#39;WAB&#39;] : 0.3501
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Given that the 2020 tournament never occured, I have no way of judging how good or bad the predictions from my regressor model might have been. I am interested in knowing how the predictions of my model compare to if I were to just pick the rounds based off of seeding. My hypothesis is: The tournament rounds produced by ranking the output of the regressor model are more accurate than the tournament rounds expected if there were no upsets (the lower seed wins every game). My alternative hypothesis is: The tournament rounds produced by the ranking of the regressor model are not more accurate than the tournament rounds expected from a team's seed.</p>
+<p>Given that the 2020 tournament never occurred, I have no way of judging how good or bad the predictions from my regressor model might have been. I am interested,however, in knowing how the predictions of my model compare to if I were to just pick the rounds based off of tournament seeding. My hypothesis is: The tournament rounds produced by ranking the output of the regressor model are more accurate than the tournament rounds expected if there were no upsets (the lower seed wins every game). My alternative hypothesis is: The tournament rounds produced by the ranking of the regressor model are not more accurate than the tournament rounds expected from a team's seed.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I did not use data from 2019 for any of my model development. I will run the Random Forest Regressor on the 2019 data. For each team, I will calculate the difference between the actual tournament round and the projected tournament round based off of seeding in 2019. I will also calculate the difference between the actual tournament round and the predicted tournament round from the regressor model. I will calculate the means for each of these sets of values. I will then perform a two sample z-test to see how different the two means are.</p>
+<p>I did not use data from 2019 for any of my model development. I will run the Random Forest Regressor on the 2019 data. For each team, I will calculate the difference between the actual tournament round and the projected tournament round based off of seeding in 2019. I will also calculate the difference between the actual tournament round and the predicted tournament round from the regressor model. I will calculate the means for each of these sets of values. I will then perform a Two-Sample Z-Test to see how different the two means are.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The two sample z-test is used to determine the significance between the means of two datasets. You can read more about the Two-Sample Z Test here: <a href="https://www.cliffsnotes.com/study-guides/statistics/univariate-inferential-tests/two-sample-z-test-for-comparing-two-means">https://www.cliffsnotes.com/study-guides/statistics/univariate-inferential-tests/two-sample-z-test-for-comparing-two-means</a></p>
+<p>The Two-Sample Z-Test is used to determine the significance between the means of two datasets. The Z-Test is a good fit here because I have over 50 samples and I have two datasets which I am trying to distinguish by the mean. You can read more about the Two-Sample Z-Test here: <a href="https://www.cliffsnotes.com/study-guides/statistics/univariate-inferential-tests/two-sample-z-test-for-comparing-two-means">https://www.cliffsnotes.com/study-guides/statistics/univariate-inferential-tests/two-sample-z-test-for-comparing-two-means</a></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -16538,8 +16538,8 @@ P-value: 0.02736758380302969
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Alternative Hypothesis - Rejected</p>
 <p>I found that my Random Forest Regressor model produced significantly closer predictions than a model which predicted outcomes solely on tournament seed.</p>
-<p>You can see that the expected round numbers derived from the seeds has an average distance from the true tournament round equal to 0.69. The predicted round numbers from my Random Forest Regressor model has an average distance from the true tournament round equal to 0.44.</p>
-<p>From the Z-test, I found that the difference between these two means is significant with a p-value of $0.027$. Because there was a realtively small number of data points (only 64), I am using an $\alpha$ value of $0.05$. The $\alpha$ value is the threshold for when the null hypothesis can be rejected. $0.027 &lt; 0.05$, therefore, I rejected the null hypothesis.</p>
+<p>You can see that the expected round numbers derived from the seeds has an average distance from the true tournament round equal to 0.69. The predicted round numbers from my Random Forest Regressor model have an average distance from the true tournament round equal to 0.44.</p>
+<p>From the Z-test, I found that the difference between these two means is significant with a p-value of $0.027$. Because there was a relatively small number of data points (only 64), I am using an $\alpha$ value of $0.05$. The $\alpha$ value is the threshold for when the null hypothesis can be rejected. $0.027 &lt; 0.05$, therefore, I rejected the null hypothesis.</p>
 
 </div>
 </div>
@@ -16552,11 +16552,11 @@ P-value: 0.02736758380302969
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>After all of this, what did we learn?</p>
 <p>First of all, we learned that data science is hard. I hope that through this report, you were able to follow my thought process as I tried to work through this data. When I first started the project, I really had no idea where to go. I dabbled with numerous machine learning methods and various parameters as I tried to make a model which made sense to me logically and had strong quantitative support. When working on a project like this, you have to be comfortable just playing around with the data and trying things out.</p>
-<p>Second, what did we learn about the NCAA tournament? Modeling outcomes in this tournament is an incredibly challenging task. There are $2^63$ possible tournament outcomes. Because of the 1 loss elimination, upsets are incredibly frequent. The goal of this project was to determine whether there were some numerical measures which might suggest that a team is less prone to be subject to an upset. The ML models which I developed could only predict outcomes with an accuracy of 0.6 as a maximum.</p>
-<p>What are the most important statistical indicators of success in the tournament? I determined that three of the most important indicators or tournament success are <code>BARTHAG</code>, <code>WAB</code>, and <code>ADJOE</code>. These variables were identified in the data exploration phase when I found the variables which were most highly correlated with tournament performance. Additionally, I saw these variables show up again as the features of most importance in my Random Forest Classifier model. Finally, the classifier and regressor models which I built were most effective when only considering these three columns of data.</p>
+<p>Now, back to basketball. Modeling outcomes in the NCAA March Madness tournament is an incredibly challenging task. There are $2^{63}$ possible tournament outcomes (63 games). Because of the 1 loss elimination, upsets are incredibly frequent. The goal of this project was to determine whether there were some numerical measures which might suggest that a team is likely to go further in the tournament. The difficulty in predicting outcomes is clearly apparent in my ML models. None of my models had an accuracy above 0.6. So much of the tournament is random, so it is to be expected that a data-built model is far from perfect.</p>
+<p>What are the most important statistical indicators of success in the tournament? I determined that three of the most important indicators or tournament success are <code>BARTHAG</code>, <code>WAB</code>, and <code>ADJOE</code>. These variables were identified in the data exploration phase when I found the variables which were most highly correlated with tournament performance. Additionally, I saw these variables show up again as the features of most importance in my Random Forest Classifier model. When comparing two opponents, these three variables might be a strong predictor of a game's outcome.</p>
 <p>What would have happened in 2020? Sadly, according to my regressor model, Maryland would have had an early Round of 32 exit. Despite a promising regular season performance, the statistics told a different story, one that suggested an early loss in the tournament.</p>
 <p>When building a bracket, how is my model any better than just picking winners based on seeds? I found that my model on average was significantly closer to the actual tournament outcomes than the seeding approach. Next March, when I make my bracket, I will run my model on data from the 2022 regular season. We will see how close I get to the actual outcomes!</p>
-<p>What's next? A critical factor when determining a team's outcome in the tournament are the opponents of the team. In this analysis, I ignored the opponent each team faces in their tournament games. I could not find a good data set which had each of the tournament matchups. Additionally, ignoring this facet helped simplify my approach to a certain extent. My next steps would be to develop a new model which takes into consideration the game matchups. When comparing two teams side by side, it might be easier to identify a team more likely to win.</p>
+<p>What's next? A critical factor when determining a team's outcome in the tournament are the opponents the team faces. In this analysis, I ignored the opponent each team faces in their tournament games. I could not find a good data set which had each of tournament matchup clearly defined. Additionally, ignoring this facet helped simplify my approach to a certain extent. My next steps would be to develop a new model which takes into consideration the game matchups. When comparing two teams side-by-side, it might be easier to identify a winning team.</p>
 
 </div>
 </div>
